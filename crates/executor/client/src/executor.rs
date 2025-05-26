@@ -44,8 +44,8 @@ pub type OpClientExecutor =
 /// An executor that executes a block inside a zkVM.
 #[derive(Debug, Clone)]
 pub struct ClientExecutor<C: ConfigureEvm, CS> {
-    evm_config: C,
-    chain_spec: Arc<CS>,
+    pub evm_config: C,
+    pub chain_spec: Arc<CS>,
 }
 
 impl<C, CS> ClientExecutor<C, CS>
